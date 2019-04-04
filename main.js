@@ -133,7 +133,7 @@ function roundComplete() {
     document.getElementById("guesses-left").innerHTML = numGuesses;
 
     // This will print the wrong guesses onto the page
-    document.getElementById("word-blank").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
 
     // This will print the wrong guesses onto the page
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
@@ -168,3 +168,24 @@ function roundComplete() {
     }
 
 }
+
+
+// MAIN PROCESS (This is the code that controls what is actually run)
+//---------------------------------------------------------------------
+
+// Starts the Game
+startGame();
+
+// Initiate the function for capturing key clicks
+document.onkeyup = function(event) {
+
+    // Converts all key clicks to lowercase letters 
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+
+    // Runs the code to check for correctness 
+    checkLetters(letterGuessed);
+
+    // Runs the code after each round is done
+    roundComplete();
+
+};
