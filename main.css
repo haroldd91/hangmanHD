@@ -1,4 +1,12 @@
+html {
+    background: black
+    opacity 0.5
+}
+
 body {
     color: slateblue
-};
+}
 
+div.container {
+    color: lightcoral
+}
