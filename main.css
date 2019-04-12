@@ -1,12 +1,20 @@
 html {
-    background: black
-    opacity 0.5
+    background: slateblue
 }
 
 body {
-    color: slateblue
+    background: lightcoral
 }
 
 div.container {
-    color: lightcoral
+    color: rgb(68, 14, 14)
+}
+
+.jumbotron {
+    background: lightgreen
+}
+
+.auth-img {
+    float: right;
+    margin: 0 0 0 15px
 }
